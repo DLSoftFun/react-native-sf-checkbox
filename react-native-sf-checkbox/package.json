@@ -1,0 +1,24 @@
+{
+  "name": "react-native-sf-checkbox",
+  "version": "1.0.0",
+  "description": "选择列表, 选择框",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DLSoftFun/react-native-sf-checkbox.git"
+  },
+  "keywords": [
+    "checkbox",
+    "box",
+    "checkboxlist"
+  ],
+  "author": "hzy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DLSoftFun/react-native-sf-checkbox.git/issues"
+  },
+  "homepage": "https://github.com/DLSoftFun/react-native-sf-checkbox#readme"
+}
