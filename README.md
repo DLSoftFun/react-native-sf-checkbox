@@ -74,6 +74,13 @@ export default class App extends Component<Props> {
 # Props
 |  parameter  |  type  |  required  |   description  |  default  |
 |:-----|:-----|:-----|:-----|:-----|
-|isShowAni|boolean|no|是否显示展示动画|true|
-|isShowShare|boolean|no|是否显示分享按钮|true|
-|onShare|function<br>()=>(index)=>{}|no|点击分享事件|()=>null|
+|style|style|no|style|null|
+|type|string('column','row')|no|横竖显示|null|
+|count|number|no|选择个数|null|
+|nickArray|array|no|名称数组|null|
+|isSingle|bool|no|是否为单选模式|null|
+|spacing|number|no|间距|null|                  
+|edgeInset|number|no|边距|null|                      
+|selectedIndex|array|no|选中下标数组|null|                
+                 
+            
