@@ -23,30 +23,49 @@ export default class App extends Component<Props> {
     constructor(props) {
         super(props);
         this.state = {
-            statu: false,
-            color: ['red', 'blue'],
+            state: false,
+         
         }
     }
 
     render() {
         return (
             <View style={{flex: 1}}>
+                    <TouchableOpacity
+                    activeOpacity={1}
+                    style={{
+                        width: 100,
+                        height: 100,
+                        backgroundColor: 'red'
+                    }}
+                    onPress={() => {
+                        alert( this.refs['box'].getChecked());
+                        this.refs['box'].setChecked(this.state.states);
+
+                        this.setState({
+                            states: !this.state.states
+                        })
+                    }}/>
+
+
                 <SFListCheckBox
                     style={{
                         marginLeft: 10,
                         marginTop: 10
                     }}
-                    type={'column'}
-                    count={2}
-                    nickArray={['这是第一个', '第二个选项']}
+                    direction={'column'}
+                    texts={['这是第一个', '第二个选项']}
                     isSingle={true}
                     spacing={20}
-                    edgeInset={10}
                     selectedIndex={1}
                     iconSize={[15, 15]}
-                    fontSize={15}
-                    fontColor={this.state.color}
+                    titleSize={15}
+                    titleColor={'blue'}
+                    onChange={(data) =>{
+
+                    }}
                 />
+
                 <SFCheckbox
                     style={{
                         marginTop: 10,
@@ -55,12 +74,8 @@ export default class App extends Component<Props> {
                     ref={'box'}
                     title={'男'}
                     defaultStatus={false}
-                    mode={0}
                     iconSize={[15, 15]}
-                    fontSize={14}
-                    onClick={() => {
-                        this.refs['box'].setStatus(true);
-                    }}
+                    titleSize={14}
                 />
             </View>
         );
@@ -75,12 +90,12 @@ export default class App extends Component<Props> {
 |  parameter  |  type  |  required  |   description  |  default  |
 |:-----|:-----|:-----|:-----|:-----|
 |style|style|no|style|null|
-|type|string('column','row')|no|横竖显示|null|
-|count|number|no|选择个数|null|
-|nickArray|array|no|名称数组|null|
+|direction|string('column','row')|no|横竖显示|null|
+|texts|array|no|名称数组|null|
 |isSingle|bool|no|是否为单选模式|null|
-|spacing|number|no|间距|null|                  
-|edgeInset|number|no|边距|null|                      
+|spacing|number|no|间距|null|                                    
 |selectedIndex|array|no|选中下标数组|null|                
+|onChange|array or number|no|返回选中|null|     
                  
+             
             
