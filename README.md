@@ -86,16 +86,41 @@ export default class App extends Component<Props> {
 
 ```
 
-# Props
-|  parameter  |  type  |  required  |   description  |  default  |
+# Props  
+
+* 单选模式  
+
+|  parameter  |  type  |  required  |  description  |  default  |
 |:-----|:-----|:-----|:-----|:-----|
-|style|style|no|style|null|
+|style|style|no|样式|null|
+|selectedImg|number|no|自定义选中图片|null|   
+|unSelectImg|number|no|自定义未选中图片|null|  
+|onChange|array or number|no|返回选中下标|null|     
+|iconSize|array|no|size数组|null|    
+|titleSize|number|no|字体大小|null|    
+|titleColor|String|no|字体颜色|null|    
+|spacing|number|no|间距|null|     
+|title|string|no|标题|null|
+
+* 多选模式    
+
+|  parameter  |  type  |  required  |  description  |  default  |
+|:-----|:-----|:-----|:-----|:-----|
 |direction|string('column','row')|no|横竖显示|null|
 |texts|array|no|名称数组|null|
 |isSingle|bool|no|是否为单选模式|null|
-|spacing|number|no|间距|null|                                    
-|selectedIndex|array|no|选中下标数组|null|                
-|onChange|array or number|no|返回选中|null|     
+|defaultColor|string|no|默认字体颜色|null|
+|selectColor|string|no|选中字体颜色|null|
+|style|style|no|样式|null|
+|selectedImg|number|no|自定义选中图片|null|   
+|unSelectImg|number|no|自定义未选中图片|null|  
+|onChange|array or number|no|返回选中下标|null|     
+|iconSize|array|no|size数组|null|    
+|titleSize|number|no|字体大小|null|    
+|titleColor|String|no|字体颜色|null|    
+|spacing|number|no|间距|null|     
+             
+
                  
              
             
